@@ -1,0 +1,18 @@
+<!doctype html>
+<head>
+    <title>Maverick Signature Generator</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class=page>
+        <h1>Signature Generator</h1>
+        {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+        {% endfor %}
+    {% block body %}{% endblock %}
+    </div>
+    <div id="footer">
+            <p>&copy; copyright 2016 - Maverick Solutions</p>
+    </div>
+</body>
+</html>
