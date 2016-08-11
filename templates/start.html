@@ -1,12 +1,39 @@
 {% extends "layout.html" %}
 {% block body %}
-    <div id="content">
-        <form name="Form" id="Form" method="post" action="/generate">
-            <input type="text" name="name" placeholder="Naam"><br/>
-            <input type="text" name="role" placeholder="Functie"><br />
-            <input type="email" name="email" placeholder="E-mail adres"><br />
-            <input type="text" name="phone" placeholder="Mobiel nummer"><br /><br /><br />
-            <input type="submit" name="submit" value="Genereren">
-        </form>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card">
+            <h1 class="title">Gegevens</h1>
+            <form name="Form" id="Form" method="post" action="/generate">
+                <div class="input-container">
+                    <input type="text" name="name" required="required"/>
+                    <label for="name">Naam</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="role" required="required"/>
+                    <label for="role">Functie</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="email" required="required"/>
+                    <label for="email">E-mail</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="phone" required="required"/>
+                    <label for="phone">Mobiel nummer</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="macbook"/>
+                    <label for="macbook">Macbook?</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                    <button><span>Go</span></button>
+                </div>
+            </form>
+        </div>
     </div>
 {% endblock %}

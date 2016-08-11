@@ -1,18 +1,24 @@
 <!doctype html>
+<html class="no-js" lang="">
 <head>
+    <meta charset="UTF-8">
     <title>Maverick Signature Generator</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 </head>
 <body>
-    <div class=page>
-        <h1>Mur Signature Generator</h1>
+    <div class="pen-title">
+        <h1>Mur Signature Generator</h1><span>by <a
+            href='http://maverick.solutions'>Maverick Solutions</a></span>
         {% for message in get_flashed_messages() %}
         <div class=flash>{{ message }}</div>
         {% endfor %}
+    </div>
     {% block body %}{% endblock %}
     </div>
-    <div id="footer">
-            <p>&copy; copyright 2016 - Maverick Solutions</p>
-    </div>
+    <a id="codepen" href="http://maverick.solutions" title="Follow me!"><i class="fa
+    fa-codepen"></i></a>
 </body>
 </html>
