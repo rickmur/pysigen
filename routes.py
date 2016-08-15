@@ -1,4 +1,3 @@
-#!C:\Users\Rick\envs\pysigen\Scripts\python.exe
 # Rick Mur - Maverick Solutions - (c) 2016
 from flask import Flask, render_template, request
 
