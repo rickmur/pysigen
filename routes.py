@@ -20,7 +20,8 @@ def generate():
     except:
         pass
 
-    return render_template('generate.html', name = fname, role = frole, email = femail, phone = fphone, font = ffont)
+    return render_template('generate.html', name = fname, role = frole, email = femail,
+                            phone = fphone, font = ffont)
 
 if __name__ == '__main__':
     try:
