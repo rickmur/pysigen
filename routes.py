@@ -1,3 +1,4 @@
+#!C:\Users\Rick\envs\pysigen\Scripts\python.exe
 # Rick Mur - Maverick Solutions - (c) 2016
 from flask import Flask, render_template, request
 
@@ -19,9 +20,15 @@ def generate():
             ffont = 'Arial'
     except:
         pass
+    ffiphone = False
+    try:
+        if request.form['iphone'] == 'on':
+            ffiphone = True
+    except:
+        pass
 
     return render_template('generate.html', name = fname, role = frole, email = femail,
-                            phone = fphone, font = ffont)
+                            phone = fphone, font = ffont, iphone = ffiphone)
 
 if __name__ == '__main__':
     try:

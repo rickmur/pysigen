@@ -1,7 +1,9 @@
+{% if iphone == True %}
 <div>
 	Begin van de handtekening
 	<hr style="width: 100%;" />
 </div>
+{% endif %}
 <div style="font-family: {{ font }}; font-size: 11pt; color: #66665d;">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Met vriendelijke groet,<br />
 	<div style="font-family: {{ font }}; font-size: 11pt; color: #66665d;"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{ name }}</b><br />
@@ -14,7 +16,9 @@
 	<br />
 	<img src="http://mur.nl/back/wp-content/uploads/2016/08/handtekening.png" />
 </div>
+{% if iphone == True %}
 <div>
 	<hr style="width: 100%;" />
 	Einde van de handtekening
 </div>
+{% endif %}
