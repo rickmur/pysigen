@@ -102,60 +102,6 @@ body {
   background: #fafafa;
   margin: 0 10px;
 }
-.container.active .card.alt {
-  top: 20px;
-  right: 0;
-  width: 100%;
-  min-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  padding: 60px 0 40px;
-  overflow: hidden;
-}
-.container.active .card.alt .toggle {
-  position: absolute;
-  top: 40px;
-  right: -70px;
-  box-shadow: none;
-  -webkit-transform: scale(10);
-  transform: scale(10);
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
-}
-.container.active .card.alt .toggle:before {
-  content: '';
-}
-.container.active .card.alt .title,
-.container.active .card.alt .input-container,
-.container.active .card.alt .button-container {
-  left: 0;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-}
-.container.active .card.alt .title {
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
-}
-.container.active .card.alt .input-container {
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
-}
-.container.active .card.alt .input-container:nth-child(2) {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-.container.active .card.alt .input-container:nth-child(3) {
-  -webkit-transition-delay: .6s;
-          transition-delay: .6s;
-}
-.container.active .card.alt .button-container {
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
-}
 
 /* Card */
 .card {
@@ -165,8 +111,6 @@ body {
   padding: 60px 0 40px 0;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
   /* Title */
   /* Inputs */
   /* Button */
@@ -191,7 +135,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
 }
-.card .input-container {
+.card .input-container, .card .checkbox-container {
   position: relative;
   margin: 0 60px 50px;
 }
@@ -207,6 +151,19 @@ body {
   font-size: 24px;
   font-weight: 400;
 }
+.card .checkbox-container {
+    height: 35px;
+}
+.card .checkbox-container input[type=checkbox] {
+  width: 100%;
+  border: 0;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
 .card .input-container input:focus ~ label {
   color: #9d9d9d;
   -webkit-transform: translate(-12%, -50%) scale(0.75);
@@ -231,7 +188,24 @@ body {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
+.card .checkbox-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #757575;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 10px;
+}
 .card .input-container .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #757575;
+  width: 100%;
+  height: 1px;
+}
+.card .checkbox-container .bar {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -326,105 +300,6 @@ body {
 }
 .card .footer a:hover {
   color: #bababa;
-}
-.card.alt {
-  position: absolute;
-  top: 40px;
-  right: -70px;
-  z-index: 10;
-  width: 140px;
-  height: 140px;
-  background: none;
-  border-radius: 100%;
-  box-shadow: none;
-  padding: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  /* Toggle */
-  /* Title */
-  /* Input */
-  /* Button */
-}
-.card.alt .toggle {
-  position: relative;
-  background: #ed2553;
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #ffffff;
-  font-size: 58px;
-  line-height: 140px;
-  text-align: center;
-  cursor: pointer;
-}
-.card.alt .toggle:before {
-  content: '\f040';
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-.card.alt .title,
-.card.alt .input-container,
-.card.alt .button-container {
-  left: 100px;
-  opacity: 0;
-  visibility: hidden;
-}
-.card.alt .title {
-  position: relative;
-  border-color: #ffffff;
-  color: #ffffff;
-}
-.card.alt .title .close {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 60px;
-  display: inline;
-  color: #ffffff;
-  font-size: 58px;
-  font-weight: 400;
-}
-.card.alt .title .close:before {
-  content: '\00d7';
-}
-.card.alt .input-container input {
-  color: #ffffff;
-}
-.card.alt .input-container input:focus ~ label {
-  color: #ffffff;
-}
-.card.alt .input-container input:focus ~ .bar:before, .card.alt .input-container input:focus ~ .bar:after {
-  background: #ffffff;
-}
-.card.alt .input-container input:valid ~ label {
-  color: #ffffff;
-}
-.card.alt .input-container label {
-  color: rgba(255, 255, 255, 0.8);
-}
-.card.alt .input-container .bar {
-  background: rgba(255, 255, 255, 0.8);
-}
-.card.alt .button-container button {
-  width: 100%;
-  background: #ffffff;
-  border-color: #ffffff;
-}
-.card.alt .button-container button span {
-  color: #ed2553;
-}
-.card.alt .button-container button:hover {
-  background: rgba(255, 255, 255, 0.9);
-}
-.card.alt .button-container button:active:before, .card.alt .button-container button:focus:before {
-  display: none;
 }
 
 /* Keyframes */
