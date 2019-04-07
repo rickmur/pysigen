@@ -46,3 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 static/scss/style.scss
+*.pyc
+.vscode/settings.json
